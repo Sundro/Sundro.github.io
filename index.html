@@ -1,0 +1,148 @@
+<!-- Container element -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/visages-01.png" />
+</head>
+
+<!-- Parrallax -->
+<body>
+<div id="parallax">
+	<div class="topcolor">
+	<!-- Video youtube -->
+		<div class="video-wrapper">
+			<div class="video">
+			<iframe width="640" height="360" src="https://www.youtube.com/embed/Ic5cp4C3QdM?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Game description -->
+<div class="presentation">
+<section class="w3-container w3-center">
+	<h1 class="w3-wide">THE GAME</h1>
+	<p class="w3-opacity"><i>
+	<p>Play with your friends (or with Companions Particularly Unintelligent if you don’t have any) and challenge your friendship in hilarious no-hold barred matches to show who is the real “Jump Master”! Your objective is clear: the more heads you jump on, the more points you gets!</p>
+	<p>Your body weight isn’t your only weapon to fight your opponents; you can use a ridiculous but deadly arsenal to unleash your supremacy: wear a SM suit to win points when people jump on you, use your underpants to blind your rivals, recreate the “You Shall not Pass!” scene with a shockwave fart, summon Nyancats, cheese slices and twitter birds falling from the sky and more!</p>
+
+	<p>Participate in crazy game modes and add a new twist to your brawls: be a selfie addict and win point by jumping in the frame each time a picture is taken, avoid a rain of explosive dog poop or brawl in a place where time is completely broken!</p></i></p>
+</section>
+</div>
+
+<!-- Parallax 2 -->
+<div id="parallax2">
+	<div class="topcolor2">
+		<div class="container">
+	   <div class="column-center"><h3>Achievement 1</h3><p>Get this wonderful achievement!</p><img class="achievement" src="images/achievement_1.png"></div>
+	   <div class="column-left"><h3>Achievement 2</h3><p>Get this wonderful achievement!</p><img class="achievement" src="images/achievement_2.png"></div>
+	   <div class="column-right"><h3>Achievement 3</h3><p>Get this wonderful achievement!</p><img class="achievement" src="images/achievement_3.png"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Slide Show -->
+<!-- Toutes les images doivent être de la même taille -->
+<div class="slideshow">
+<section>
+  <img class="mySlides" src="images/Photos/1.jpg">
+  <img class="mySlides" src="images/Photos/2.jpg">
+  <img class="mySlides" src="images/Photos/3.jpg">
+  <img class="mySlides" src="images/Photos/4.jpg">
+  <img class="mySlides" src="images/Photos/5.jpg">
+  <img class="mySlides" src="images/Photos/6.jpg">
+  <img class="mySlides" src="images/Photos/7.jpg">
+  <img class="mySlides" src="images/Photos/8.jpg">
+  <img class="mySlides" src="images/Photos/9.jpg">
+  <img class="mySlides" src="images/Photos/10.jpg">
+  <img class="mySlides" src="images/Photos/11.jpg">
+  <img class="mySlides" src="images/Photos/12.jpg">
+</section>
+</div>
+<script>// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}</script>
+
+
+<!-- Parallax 3 -->
+<div id="parallax3"><div class="topcolor3"> </div></div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16 w3-center w3-black w3-xlarge">
+  <p><a href="#"><i class="fa fa-steam-square"></i></a>
+  <a href="https://www.facebook.com/JumpHead.Battle4Fun"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://twitter.com/jumphead_b4f"><i class="fa fa-twitter"></i></a>
+  <a href="mailto:davidaurelien@orange.fr"><i class="fa fa-envelope"></i></a>
+  <a href="http://www.e-neko.com/press/sheet.php?p=JumpHead:%20Battle4Fun!">presskit</a></p>
+  <p>
+  	<img class="logo" src="images/logo_team.png">
+  	<img class="logo" src="images/logo_neko.png">
+  </p>
+</footer>
+
+
+
+<!-- Parallax opacité & position -->
+<script type="text/javascript">
+var htmlStyles = window.getComputedStyle(document.querySelector("html"));
+var opacity1 = htmlStyles.getPropertyValue("--opacity1");
+var opacity2 = htmlStyles.getPropertyValue("--opacity2");
+var opacity3 = htmlStyles.getPropertyValue("--opacity3");
+window.addEventListener('scroll', Scroll)
+
+function Scroll(){
+	var para = document.getElementById('parallax');
+	var para2 = document.getElementById('parallax2');
+	var para3 = document.getElementById('parallax3');
+
+	var d = document;
+	var e = d.body;
+	var a = e.scrollTop;
+	var b = e.scrollHeight - e.clientHeight;
+
+	function setOpacity(parano)
+	{
+		var targetHeight = parano.offsetHeight;
+		var targetHeight2 = e.clientHeight;
+		var scrollPercent = 1 - (targetHeight - (window.scrollY - parano.offsetTop)) / targetHeight;
+		//return 0.5 + (scrollPercent/2);
+		return Math.max(0.5, 0.5 + (scrollPercent/2));
+	}
+
+	function setPosition(parano)
+	{
+		var targetHeight = parano.offsetHeight;
+		var targetHeight2 = e.clientHeight;
+		var scrollPercent = 1 - (targetHeight - (window.scrollY - parano.offsetTop)) / targetHeight2;
+		//return 0.5 + (scrollPercent/2);
+		return Math.max(0, scrollPercent);
+	}
+
+  para.style.backgroundPosition = "center " + (setPosition(para) * -50) + "px";
+  para2.style.backgroundPosition = "center " + (setPosition(para2) * -50) + "px";
+  para3.style.backgroundPosition = "center " + (setPosition(para3) * -50) + "px";
+
+	document.querySelector("html").style.setProperty("--opacity1", setOpacity(para));
+	document.querySelector("html").style.setProperty("--opacity2", setOpacity(para2));
+	document.querySelector("html").style.setProperty("--opacity3", setOpacity(para3));
+}
+</script>
+</body>
+</html>

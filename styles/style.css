@@ -1,0 +1,134 @@
+:root {
+  --opacity1: 0.5;
+  --opacity2: 0.5; 
+  --opacity3: 0.5;
+}
+
+#parallax { 
+    /* The image used */
+    background-image: url("../images/parallax.jpg");
+
+    /* Set a specific height */
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: relative;
+    /*background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+#parallax2 { 
+    /* The image used */
+    background-image: url("../images/example.png");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#parallax3 { 
+    /* The image used */
+    background-image: url("../images/fond.png");
+
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.topcolor {
+	/* background: rgba(77,185,73,	var(--opacity1)); */
+	background: rgba(0,0,0,	var(--opacity1));
+	height: 100%;
+	width: 100%;
+}
+
+.topcolor2 {
+	/*background: rgba(2,154,151,var(--opacity2));*/
+	background: rgba(0,0,0,	var(--opacity2));
+	height: 100%;
+	width: 100%;
+}
+
+.topcolor3 {
+	/*background: rgba(2,154,151,var(--opacity3));*/
+	background: rgba(0,0,0,	var(--opacity3));
+	height: 100%;
+	width: 100%;
+}
+
+.presentation {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	  text-align: center;
+	  max-width: 1000px;
+	  width: 100%;
+	  margin-right: auto;
+	  margin-left: auto;
+	  color: white;
+}
+
+body {
+	/*background-image:linear-gradient(#3D3D3D, black);*/
+	background-image:linear-gradient(#0A0A0A, black);
+	text-align: center;
+}
+
+.video {
+  position: relative;
+	padding-top: 30px;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+.video iframe,  
+.video object,  
+.video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.video-wrapper {
+	width: 800px;
+	max-width: 100%;
+	margin-left: auto; margin-right: auto;
+	height: 100%;
+}
+
+
+.slideshow {
+	position: relative;
+	margin-left: auto; margin-right: auto;
+	max-height: 500px;
+	max-width: 911px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.container{
+	max-width: 1000px;
+	margin-right: auto; margin-left: auto;
+}
+.column-left{float: left; width: 33%;}
+.column-right{float: right; width: 33%; }
+.column-center{display: inline-block; width: 33%; }
+img {
+	max-width:100%;
+	max-height:100%;
+}
